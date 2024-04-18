@@ -1,0 +1,423 @@
+/* ---------------------- general ----------------------- */
+body {
+  height: 100%;
+  margin: 0;
+  color: #31363F;
+  background-color: #EEEEEE;
+  font-family: "Roboto Mono", monospace;
+}
+
+.black-bg {
+  background-color: #222831;
+  color: #EEEEEE;
+}
+
+.highlight {
+  color: #76ABAE;
+}
+/* -------------------- general end --------------------- */
+
+/* -------------------- landing page -------------------- */
+.header {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  gap: 9px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.header-name {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-img {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-img img {
+  width: 50%;
+  border-radius: 50%;
+  scale: 0.9; opacity: 0;
+  animation: fade-in 2s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+}
+
+.text {
+  overflow: hidden;
+  border-right: .15rem solid #76ABAE;
+  white-space: nowrap;
+  letter-spacing: 10px;
+  animation:
+    typing 2s steps(15),
+    cursor .4s step-end infinite alternate;
+}
+
+@keyframes typing {
+  from {width: 0}
+  to {width: 100%}
+}
+
+@keyframes cursor {
+  50% {border-color: transparent;}
+}
+
+@keyframes fade-in {
+  from {filter: blur(5px);}
+  to {scale: 1; opacity: 1;}
+}
+/* ------------------ landing page end ------------------ */
+
+/* --------------------- brief page --------------------- */
+.container-brief {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  gap: 9px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.brief-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.text-box {
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: 20vh 50vh;
+  animation-fill-mode: forwards;
+}
+/* ------------------- brief page end ------------------- */
+
+/* ------------------- expertise page ------------------- */
+.partition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 12.5vh;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.line {
+  background-color: #76ABAE;
+  height: .05rem;
+  width: 100%;
+}
+
+.container-half {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 75vh;
+  gap: 9px;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.container-half-title {
+  width: 49%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: 20vh 50vh;
+  animation-fill-mode: forwards;
+}
+
+.skills-box {
+  width: 49%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: 20vh 50vh;
+  animation-fill-mode: forwards;
+}
+
+.skills-list {
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-list li {
+  padding: 0.25rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: left;
+}
+/* ---------------- expertise page end ---------------- */
+
+/* ----------------- history edu page ----------------- */
+
+.standard-box {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  opacity: 0;
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range: 20vh 50vh;
+  animation-fill-mode: forwards;
+}
+
+.standard-list {
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.standard-list li {
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+#job1 #present {
+  font-size: 2rem;
+}
+
+.job-button {
+  margin-left:-20px;
+  margin-right:-20px;
+  padding:0 20px;
+  border-radius:10px;
+  color: #EEEEEE;
+  text-decoration: none;
+}
+
+.job-button:hover {
+  background-color:#76ABAE;
+  color: #222831;
+}
+
+.popup-margin{
+  width: 100%;
+  height: 10%;
+}
+
+.popup-content{
+  width:100%;
+  height: 80%;
+  background-color:#EEEEEE;
+  border-radius:10px;
+}
+
+#popup1, #popup2, #popup3{
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+  z-index: 1;
+  margin-left: 10%;
+  margin-right: 10%;
+  width:80%;
+  height:100%;
+  color:#31363F;
+  -khtml-opacity:0;
+  -moz-opacity : 0;
+  -ms-filter: "alpha(opacity=0)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  filter : alpha(opacity=0);
+  opacity : 0;
+  transition:all 2s;
+  -webkit-transition:all 2s;
+}
+
+#popup1:target, #popup2:target, #popup3:target{
+  visibility: visible;
+  -khtml-opacity: .95;
+  -moz-opacity : .95;
+  -ms-filter: "alpha(opacity=95)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=95);
+  filter : alpha(opacity=95);
+  opacity : .95;
+}
+
+#close
+{
+  position:absolute;
+  text-align: center;
+  left:50%;
+  bottom:10%;
+  transform: translate(-50%, -50%);
+  background-color:#76ABAE;
+  font-size:1rem;
+  padding:1rem 1.4rem;
+  border-radius:50px;
+  font-weight:bold;
+  color:#222831;
+  text-decoration:none;
+  transition: all .1s ease-in-out;
+}
+
+#close:hover
+{
+  background-color:#222831;
+  color:#76ABAE;
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+#close:active
+{
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.poplist {
+  flex-wrap: wrap;
+}
+
+.poplist li {
+  padding: 0.5rem;
+  font-size: .8rem;
+  text-align: left;
+}
+
+/* --------------- history edu end page --------------- */
+
+/* ------------------- training page ------------------ */
+.training-list {
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.training-list li {
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+/* ----------------- training page end ---------------- */
+
+/* -------------------- footer page ------------------- */
+footer {
+  text-align: center;
+  font-size: .7rem;
+  color: #222831;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.bi {
+  height: 1rem;
+}
+
+.contact, .copyright{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.button {
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #222831;
+  padding: 1rem .75rem;
+  margin-left: .5rem;
+  margin-right: .5rem;;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: #222831;
+  color: #76ABAE;
+  scale: 1.2;
+}
+
+.button:active {
+  scale: 1;
+}
+
+/* ------------------ footer page end ----------------- */
+
+/* ----------------- responsive rule ------------------ */
+@media (max-width: 1055px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-name {
+    height: 100%;
+    justify-content: center;
+  }
+
+  .header-img {
+    height: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .header-img img {
+    width: 250px;
+  }
+
+  .container-half {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .text {
+    font-size: 1rem;
+  }
+
+  .container-half-title {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  #history {
+    height: 100%;
+    position: relative;
+  }
+  
+  #popup1, #popup2, #popup3{
+    height: 100%;
+  }
+
+  .skills-box, .standard-box {
+    width: 100%;
+  }
+
+  .skills-list, .standard-list, .training-list {
+    margin-bottom: 2rem;
+  }
+
+  .skills-list li, .standard-list li{
+    font-size: .9rem;
+  }
+
+  .training-list li {
+    font-size: .7rem;
+  }
+
+  .button {
+    font-size: .8rem;
+  }
+}
+/* ---------------- responsive rule end --------------- */
