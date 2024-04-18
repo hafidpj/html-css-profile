@@ -221,6 +221,7 @@ body {
   height: 80%;
   background-color:#EEEEEE;
   border-radius:10px;
+  overflow-y:scroll;
 }
 
 #popup1, #popup2, #popup3{
@@ -269,6 +270,7 @@ body {
   color:#222831;
   text-decoration:none;
   transition: all .1s ease-in-out;
+  opacity: .5;
 }
 
 #close:hover
@@ -276,6 +278,7 @@ body {
   background-color:#222831;
   color:#76ABAE;
   transform: translate(-50%, -50%) scale(1.2);
+  opacity: 1;
 }
 
 #close:active
